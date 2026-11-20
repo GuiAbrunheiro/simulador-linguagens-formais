@@ -1,0 +1,33 @@
+{
+  "nome": "MT Opção A: L = { w#w }",
+  "descricao": "Reconhece cadeias formadas por duas cópias de w separadas por #.",
+  "estados": ["q0", "qa", "qb", "qa2", "qb2", "qvolta", "qvolta2", "qfim", "qaceita", "qrejeita"],
+  "alfabeto": ["a", "b", "#"],
+  "alfabeto_fita": ["a", "b", "#", "X", "_"],
+  "branco": "_",
+  "inicial": "q0",
+  "aceitacao": "qaceita",
+  "rejeicao": "qrejeita",
+  "transicoes": [
+    {"de": "q0", "le": "a", "para": "qa", "escreve": "X", "move": "D"},
+    {"de": "q0", "le": "b", "para": "qb", "escreve": "X", "move": "D"},
+    {"de": "q0", "le": "#", "para": "qfim", "escreve": "#", "move": "D"},
+    {"de": "qfim", "le": "X", "para": "qfim", "escreve": "X", "move": "D"},
+    {"de": "qfim", "le": "_", "para": "qaceita", "escreve": "_", "move": "P"},
+    {"de": "qvolta", "le": "X", "para": "qvolta", "escreve": "X", "move": "E"},
+    {"de": "qvolta", "le": "#", "para": "qvolta2", "escreve": "#", "move": "E"},
+    {"de": "qvolta2", "le": "a", "para": "qvolta2", "escreve": "a", "move": "E"},
+    {"de": "qvolta2", "le": "b", "para": "qvolta2", "escreve": "b", "move": "E"},
+    {"de": "qvolta2", "le": "X", "para": "q0", "escreve": "X", "move": "D"},
+    {"de": "qa", "le": "a", "para": "qa", "escreve": "a", "move": "D"},
+    {"de": "qa", "le": "b", "para": "qa", "escreve": "b", "move": "D"},
+    {"de": "qa", "le": "#", "para": "qa2", "escreve": "#", "move": "D"},
+    {"de": "qa2", "le": "X", "para": "qa2", "escreve": "X", "move": "D"},
+    {"de": "qa2", "le": "a", "para": "qvolta", "escreve": "X", "move": "E"},
+    {"de": "qb", "le": "a", "para": "qb", "escreve": "a", "move": "D"},
+    {"de": "qb", "le": "b", "para": "qb", "escreve": "b", "move": "D"},
+    {"de": "qb", "le": "#", "para": "qb2", "escreve": "#", "move": "D"},
+    {"de": "qb2", "le": "X", "para": "qb2", "escreve": "X", "move": "D"},
+    {"de": "qb2", "le": "b", "para": "qvolta", "escreve": "X", "move": "E"}
+  ]
+}

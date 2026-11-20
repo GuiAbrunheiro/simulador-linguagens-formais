@@ -1,0 +1,11 @@
+{
+  "nome": "GLC de expressões aritméticas",
+  "variaveis": ["E", "T", "F"],
+  "terminais": ["x", "+", "*", "(", ")"],
+  "inicial": "E",
+  "producoes": {
+    "E": ["E+T", "T"],
+    "T": ["T*F", "F"],
+    "F": ["(E)", "x"]
+  }
+}

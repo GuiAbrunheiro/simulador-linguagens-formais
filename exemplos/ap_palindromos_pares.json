@@ -1,0 +1,18 @@
+{
+  "nome": "AP não determinístico: palíndromos de tamanho par (w wᴿ)",
+  "estados": ["q0", "q1", "qf"],
+  "alfabeto": ["a", "b"],
+  "alfabeto_pilha": ["A", "B", "Z"],
+  "inicial": "q0",
+  "simbolo_inicial_pilha": "Z",
+  "finais": ["qf"],
+  "aceitacao": "estado_final",
+  "transicoes": [
+    {"de": "q0", "leitura": "a", "topo": "λ", "para": "q0", "empilha": "A"},
+    {"de": "q0", "leitura": "b", "topo": "λ", "para": "q0", "empilha": "B"},
+    {"de": "q0", "leitura": "λ", "topo": "λ", "para": "q1", "empilha": "λ"},
+    {"de": "q1", "leitura": "a", "topo": "A", "para": "q1", "empilha": "λ"},
+    {"de": "q1", "leitura": "b", "topo": "B", "para": "q1", "empilha": "λ"},
+    {"de": "q1", "leitura": "λ", "topo": "Z", "para": "qf", "empilha": "Z"}
+  ]
+}

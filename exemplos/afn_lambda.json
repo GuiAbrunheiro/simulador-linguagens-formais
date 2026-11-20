@@ -1,0 +1,12 @@
+{
+  "nome": "AFN-λ: a*b* (zero ou mais a's seguidos de zero ou mais b's)",
+  "estados": ["q0", "q1"],
+  "alfabeto": ["a", "b"],
+  "inicial": "q0",
+  "finais": ["q1"],
+  "transicoes": [
+    {"de": "q0", "simbolo": "a", "para": "q0"},
+    {"de": "q0", "simbolo": "λ", "para": "q1"},
+    {"de": "q1", "simbolo": "b", "para": "q1"}
+  ]
+}

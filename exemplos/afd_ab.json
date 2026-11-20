@@ -1,0 +1,11 @@
+{
+  "nome": "AFD do enunciado: aceita apenas 'ab'",
+  "estados": ["q0", "q1", "q2"],
+  "alfabeto": ["a", "b"],
+  "inicial": "q0",
+  "finais": ["q2"],
+  "transicoes": [
+    {"de": "q0", "simbolo": "a", "para": "q1"},
+    {"de": "q1", "simbolo": "b", "para": "q2"}
+  ]
+}

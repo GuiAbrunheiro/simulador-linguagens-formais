@@ -1,0 +1,13 @@
+{
+  "nome": "AFD: quantidade par de a's",
+  "estados": ["par", "impar"],
+  "alfabeto": ["a", "b"],
+  "inicial": "par",
+  "finais": ["par"],
+  "transicoes": [
+    {"de": "par", "simbolo": "a", "para": "impar"},
+    {"de": "par", "simbolo": "b", "para": "par"},
+    {"de": "impar", "simbolo": "a", "para": "par"},
+    {"de": "impar", "simbolo": "b", "para": "impar"}
+  ]
+}

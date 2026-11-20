@@ -1,0 +1,9 @@
+{
+  "nome": "GLC do enunciado: { aⁿbⁿ | n ≥ 0 }",
+  "variaveis": ["S"],
+  "terminais": ["a", "b"],
+  "inicial": "S",
+  "producoes": {
+    "S": ["aSb", "λ"]
+  }
+}

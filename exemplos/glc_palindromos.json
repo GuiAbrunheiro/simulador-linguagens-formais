@@ -1,0 +1,9 @@
+{
+  "nome": "GLC de palíndromos sobre {a, b}",
+  "variaveis": ["S"],
+  "terminais": ["a", "b"],
+  "inicial": "S",
+  "producoes": {
+    "S": ["aSa", "bSb", "a", "b", "λ"]
+  }
+}

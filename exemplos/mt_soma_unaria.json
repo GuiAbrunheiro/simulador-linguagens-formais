@@ -1,0 +1,20 @@
+{
+  "nome": "MT Opção B: soma em unário",
+  "descricao": "Entrada 0^m 1 0^n (m + n). Resultado na fita: 0^(m+n).",
+  "estados": ["q0", "q1", "q2", "q3", "qaceita", "qrejeita"],
+  "alfabeto": ["0", "1"],
+  "alfabeto_fita": ["0", "1", "_"],
+  "branco": "_",
+  "inicial": "q0",
+  "aceitacao": "qaceita",
+  "rejeicao": "qrejeita",
+  "transicoes": [
+    {"de": "q0", "le": "0", "para": "q0", "escreve": "0", "move": "D"},
+    {"de": "q0", "le": "1", "para": "q1", "escreve": "0", "move": "D"},
+    {"de": "q1", "le": "0", "para": "q1", "escreve": "0", "move": "D"},
+    {"de": "q1", "le": "_", "para": "q2", "escreve": "_", "move": "E"},
+    {"de": "q2", "le": "0", "para": "q3", "escreve": "_", "move": "E"},
+    {"de": "q3", "le": "0", "para": "q3", "escreve": "0", "move": "E"},
+    {"de": "q3", "le": "_", "para": "qaceita", "escreve": "_", "move": "D"}
+  ]
+}
